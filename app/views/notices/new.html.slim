@@ -1,6 +1,6 @@
 h1 Notices#new
 
-= form_for(@user) do |user_form|
+= form_for(@user, url: 'create') do |user_form|
   - if @user.errors.any?
     .error_message
     h2 Error Occurred
