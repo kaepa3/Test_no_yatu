@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title
+      | TestApp
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .navbar.navbar-default role="navigation"
+      .container
+        .navbar-header
+          .user-name
+            - if logged_in?
+              |UserName:
+              = current_user.email
+              = link_to("logout", {controller: "notices", action: "logout_to"}, method: :post)
+    = yield

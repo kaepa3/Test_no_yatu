@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post 'notices/create'
 
+  post 'notices/logout_to'
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

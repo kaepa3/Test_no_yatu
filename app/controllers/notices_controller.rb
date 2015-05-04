@@ -1,4 +1,6 @@
 class NoticesController < ApplicationController
+
+  before_action :require_login, only: [:home]
   def index
     @notice ||= flash.now[:notice]
   end
@@ -6,13 +8,14 @@ class NoticesController < ApplicationController
   def verification
     user = login(params[:email], params[:password], params[:remember_me])
     if user
-      redirect_back_or_to root_url, notice: 'Logged in!'
+      redirect_to '/notices/home', notice: 'Logged in!'
     else
       redirect_to root_url, notice: 'Email or password was invalid.'
     end
   end
 
   def home
+
   end
 
   def new
@@ -30,4 +33,8 @@ class NoticesController < ApplicationController
     end
   end
 
+  def logout_to
+    logout
+    redirect_to root_url
+  end
 end
