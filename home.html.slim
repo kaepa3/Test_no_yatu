@@ -1,0 +1,17 @@
+h1 Notices#home
+p Find me in app/views/notices/home.html.slim
+
+table border ="1"
+  - @users.each do |user|
+    tr
+      td = "namae=>" + user.user_name
+      td = "email=>" + user.email
+  tr
+    - if defined?(@input_form)
+      td add_action
+    - else
+      td = form_tag(controller: "notices", action: "home") do
+          = submit_tag("検索", name: nil)
+
+
+br

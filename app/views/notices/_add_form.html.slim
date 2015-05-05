@@ -1,0 +1,5 @@
+h1 = @input_form
+
+= form_tag({action: "addtask"}, {remote: true} ) do
+  = text_field_tag(:page, :name)
+  = submit_tag("add")

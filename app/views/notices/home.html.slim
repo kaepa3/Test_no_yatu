@@ -1,2 +1,18 @@
 h1 Notices#home
 p Find me in app/views/notices/home.html.slim
+
+.hoge
+
+table border ="1"
+  - @users.each do |user|
+    tr
+      td = "namae:" + "#{user.user_name}"
+      td = "email:" + "#{user.email}"
+
+
+= form_tag({action: "home"}, {remote: true} ) do
+  = submit_tag("serch")
+
+.hoge
+
+br

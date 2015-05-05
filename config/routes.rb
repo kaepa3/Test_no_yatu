@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'notices/index'
 
   get 'notices/home'
+  post 'notices/home'
+
+  post 'notices/addtask'
 
   get 'notices/new'
 
