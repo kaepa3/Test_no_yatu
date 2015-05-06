@@ -1,18 +1,16 @@
-h1 Notices#home
-p Find me in app/views/notices/home.html.slim
+.error_msg
+  = @notice
+- @task_inofomations.each do |t_info|
+  .datas
+    h3 = t_info.task_name
+    hr
+    = link_to 'delete', "home?delete=" + t_info.task_name
+    .members
+      ul
+        - t_info.task_members.each do |member|
+          li = member
 
 .hoge
+  = form_tag({action: "home"}, {remote: true} ) do
+    = submit_tag("disp", {id: 'disp_input'})
 
-table border ="1"
-  - @users.each do |user|
-    tr
-      td = "namae:" + "#{user.user_name}"
-      td = "email:" + "#{user.email}"
-
-
-= form_tag({action: "home"}, {remote: true} ) do
-  = submit_tag("serch")
-
-.hoge
-
-br

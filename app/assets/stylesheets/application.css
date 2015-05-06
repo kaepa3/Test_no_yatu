@@ -1,4 +1,5 @@
 /*
+
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -13,3 +14,82 @@
  *= require_tree .
  *= require_self
  */
+
+.header_common
+{
+   height: 50px;
+   line-height: 50px;
+}
+.maincontents{
+   margin:  5px 10px 5px 10px;
+   width: 100%;  
+}
+.index_body{
+    width: 370px;  
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    background-color: #ffffcc;   /* 背景色 */
+    padding: 5px 0px 40px 45px;   
+    margin: 0 auto;}
+.new_body{
+    width: 370px;  
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    background-color: #ffcccc;   /* 背景色 */
+    padding: 5px 0px 40px 45px;   
+    margin: 0 auto;
+}
+.field{
+
+   height: 30px;
+}
+.field_label{
+   float: left;
+   width: 100px;
+}
+.actions{
+   clear: both;
+ }
+
+
+.hoge{
+	clear: both;
+}
+
+.input_form {
+   -moz-border-radius: 20px;
+   -webkit-border-radius: 20px; 
+   background-color: #ccffcc;   /* 背景色 */
+   border-radius: 20px;
+   padding: 5px 10px 15px 20px;   margin:  5px 10px 5px 10px;
+   width: 200px;
+}
+
+input#disp_input {
+   width: 100px;
+   height: 30px;
+   border-radius: 10px;
+   background-color: #ccccff;   /* 背景色 */
+}
+
+
+.datas {
+   -moz-border-radius: 20px;
+   -webkit-border-radius: 20px; 
+   border-radius: 20px;
+   padding: 5px 10px 15px 20px;
+   background-color: #FFBAD2;   /* 背景色 */
+   margin:  5px 10px 5px 10px;
+   width: 200px;
+   height: 250px;
+   float: left;
+}
+hr{
+   margin: 5px 5px;
+   background-color: #cccccc;
+}
+
+#select_members{
+   width: 100px;
+   background-color: #cccccc;   /* 背景色 */
+}

@@ -9,11 +9,15 @@ html
 
   body
     .navbar.navbar-default role="navigation"
-      .container
+      .container.header_common
         .navbar-header
-          .user-name
-            - if logged_in?
+          = image_tag 'logo.png', size: "120x50"
+        .navbar-right
+          - if logged_in?
+            .user-name
               |UserName:
-              = current_user.email
+              = current_user.user_name
+              span [style = "margin-right: 1em"]
               = link_to("logout", {controller: "notices", action: "logout_to"}, method: :post)
-    = yield
+    .maincontents
+      = yield

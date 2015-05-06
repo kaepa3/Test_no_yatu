@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504121512) do
+ActiveRecord::Schema.define(version: 20150506130716) do
 
   create_table "tasks", force: true do |t|
     t.string   "task_name"
@@ -24,17 +24,19 @@ ActiveRecord::Schema.define(version: 20150504121512) do
     t.string   "task_name_key"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "task_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                                         null: false
+    t.string   "email",                        null: false
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
-    t.string   "user_name",                    default: "test", null: false
+    t.string   "user_name",                    null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,18 +1,21 @@
-h1 Notices#index
-= @notice
+.index_body
+  h1 Notices#index
+  = @notice
 
-= form_tag("notices/verification") do
+  = form_tag("notices/verification") do
 
-  .field
-    = label_tag :user_name
-    = text_field_tag :user_name, params[:user_name]
-  .field
-    = label_tag :password
-    = password_field_tag :password
-  .field
-    = check_box_tag :remember_me , 1, params[:remember_me]
-    = label_tag :remember_me
-  .actions
-    = submit_tag "Log in"
+    .field
+      .field_label
+        = label_tag :user_name
+      = text_field_tag :user_name, params[:user_name]
+    .field
+      .field_label
+        = label_tag :password
+      = password_field_tag :password
+    .field
+      = check_box_tag :remember_me , 1, params[:remember_me]
+      = label_tag :remember_me
+    .actions
+      = submit_tag "Log in"
 
-a(href="notices/new") ユーザ追加
+  a(href="notices/new") ユーザ追加

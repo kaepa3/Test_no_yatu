@@ -1,23 +1,28 @@
-h1 Notices#new
+.new_body
+  h1 Notices#new
 
-= form_for(@user, url: 'create') do |user_form|
-  - if @user.errors.any?
-    .error_message
-    h2 Error Occurred
-    hl
-      - for message in @user.errors.full_messages
-        li = message
-  .field
-    = user_form.label :email
-    = user_form.text_field :email
-  .field
-    = user_form.label :user_name
-    = user_form.text_field :user_name
-  .field
-    = user_form.label :password
-    = user_form.text_field :password
-  .field
-    = user_form.label :password_confirmation
-    = user_form.password_field :password_confirmation
-  .actions
-    = user_form.submit
+  = form_for(@user, url: 'create') do |user_form|
+    - if @user.errors.any?
+      .error_message
+      h2 Error Occurred
+      hl
+        - for message in @user.errors.full_messages
+          li = message
+    .field
+      .field_label
+        = user_form.label :email
+      = user_form.text_field :email
+    .field
+      .field_label
+        = user_form.label :user_name
+      = user_form.text_field :user_name
+    .field
+      .field_label
+        = user_form.label :password
+      = user_form.text_field :password
+    .field
+      .field_label
+        = user_form.label :password_confirmation
+      = user_form.password_field :password_confirmation
+    .actions
+      = user_form.submit

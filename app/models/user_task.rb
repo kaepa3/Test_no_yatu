@@ -1,6 +1,6 @@
 class UserTask < ActiveRecord::Base
 
-  has_many :user
-  has_many :task
+  belongs_to :user
+  belongs_to :task
 
 end

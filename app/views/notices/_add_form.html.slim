@@ -1,5 +1,10 @@
-h1 = @input_form
-
-= form_tag({action: "addtask"}, {remote: true} ) do
-  = text_field_tag(:page, :name)
-  = submit_tag("add")
+.input_form
+  h2 input
+  = form_tag(action: "addtask" ) do
+    = text_field_tag( 'taskname' )
+    hr
+    = select_tag( 'select_members', options_for_select(@users.map{|user| user.user_name}),
+    multiple: true, size: @users.size)
+    hr
+    .other
+      = submit_tag("add", {id: 'disp_input'})
