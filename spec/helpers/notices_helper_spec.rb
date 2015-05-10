@@ -11,5 +11,18 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe NoticesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Can delete_task?" do
+    task_name = 'hoge'
+    before_count = Task.where('task_name =?', task_name).count
+
+    record = Task.new
+    record.task_name = task_name
+    record.save!
+
+    delete_task task_name
+
+    after_count = Task.where('task_name =?', task_name).count
+    expect(before_count).to eq(after_count)
+  end
 end
+

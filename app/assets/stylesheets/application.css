@@ -74,15 +74,16 @@ input#disp_input {
 
 
 .datas {
-   -moz-border-radius: 20px;
-   -webkit-border-radius: 20px; 
-   border-radius: 20px;
-   padding: 5px 10px 15px 20px;
-   background-color: #FFBAD2;   /* 背景色 */
-   margin:  5px 10px 5px 10px;
-   width: 200px;
-   height: 250px;
-   float: left;
+  word-wrap: break-word;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px; 
+  border-radius: 20px;
+  padding: 5px 10px 15px 20px;
+  background-color: #FFBAD2;   /* 背景色 */
+  margin:  5px 10px 5px 10px;
+  width: 200px;
+  height: 250px;
+  float: left;
 }
 hr{
    margin: 5px 5px;
@@ -90,6 +91,8 @@ hr{
 }
 
 #select_members{
-   width: 100px;
-   background-color: #cccccc;   /* 背景色 */
+  width: 100px;
+  background-color: #00cccc;   /* 背景色 */
+  border-radius: 5px;
+
 }

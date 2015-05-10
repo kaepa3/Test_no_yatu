@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "notices/home.html.slim", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+  end
+
+  it "Display It" do
+    @task_inofomations =[]
+    render
+    expect(rendered).to match /btn-default/
+  end
+
 end

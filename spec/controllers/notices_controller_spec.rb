@@ -12,8 +12,7 @@ RSpec.describe NoticesController, type: :controller do
   describe "GET #home" do
     it "returns http success" do
       get :home
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(302)
     end
   end
-
 end

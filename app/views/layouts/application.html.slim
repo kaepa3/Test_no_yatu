@@ -11,13 +11,12 @@ html
     .navbar.navbar-default role="navigation"
       .container.header_common
         .navbar-header
-          = image_tag 'logo.png', size: "120x50"
+          = link_to image_tag('logo.png', size: "120x50"), "/notices/home"
         .navbar-right
           - if logged_in?
-            .user-name
-              |UserName:
-              = current_user.user_name
-              span [style = "margin-right: 1em"]
-              = link_to("logout", {controller: "notices", action: "logout_to"}, method: :post)
+            |UserName:
+            = current_user.user_name
+            span [style = "margin-right: 1em"]
+            = link_to("logout", {controller: "notices", action: "logout_to"}, method: :post)
     .maincontents
       = yield
