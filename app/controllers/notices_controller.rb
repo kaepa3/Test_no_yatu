@@ -63,6 +63,8 @@ class NoticesController < ApplicationController
 
   #ログアウト
   def logout_to
+    remember_me!
+    forget_me!
     logout
     redirect_to root_url
   end
@@ -85,5 +87,4 @@ class NoticesController < ApplicationController
     end
     redirect_to action: :home, notice: errmsg
   end
-
 end
